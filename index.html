@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Harshita Srivastava Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Harshita Srivastava</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/yo1.jpg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Harshita Srivastava</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						"Business Development",
+						'Data Science and Analytics',
+						'Full-Stack Web Developer ',
+						'Researcher ',
+						,
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h4>Business Development Intern at Gen Z Solutions Private Limited</h4>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/harshita-srivastava-11b8b5234/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/harshitah2s4" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/pass.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Harshita Srivastava</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Business Development Intern</span></p>
+										<p><span class="title-s">Experience: </span> <span>1 year 3 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Kanpur, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Business Development Intern</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>R</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									
+									<span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Web Development</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span> SAP FICO and MM</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>Research and Technical Writing,</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div><span>Product Management</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p> I am a final year IT undergraduate student of HBTU Kanpur, India. Currently I'm working as Business Development Intern at Gen Z Solutions Private Limited. My interests are Data Science and Analytics,
+									Machine Learning, Full-Stack Web Development, SAP, Business Development, Management and Finance. I have done certified courses and developed
+									real-world projects for same. I have worked as research intern at IIT Patna and IIIT Kottayam. I founded the Book Banter Club in college and we have held several online and offline events so far</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Business Development &amp; Data Analysis</span></li>
+									<li class="d-flex"><span>Platform:</span> <span>HubSpot CRM, Microsoft PowerBI, Tableau, Microsoft Excel, Microsoft Office, VS Code&amp; Microsoft SQL Server </span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
+									<li class="d-flex"><span>Languages:</span> <span>English, Hindi, French</span></li>
+									<li class="d-flex"><span> Relevant Coursework:</span> <span>Economics & Management, DBMS, Entrepreneurship, OOPS, Professional Communication, Data Structures and Algorithms, Software Engineering, Discreet Structures, Compiler Design, Internet of Things, Computer Graphics&amp; Tableau</span></li>
+									<li class="d-flex"><span>Proficient in:</span> <span>Machine Learning , Data Science and Analytics, Statistical Knowledge, SAP FICO and MM, Business
+										Development, Product Management, Research and Technical Writing, Basic Finance Knowledge, Quantitative Skills &amp; Visualisation techniques</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Volunteering, Dancing, Origami, Writing </span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="23">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/harshita-srivastava-11b8b5234/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Final year Information Technology student with expertise in Business Development, Management, Data Analysis and Web Development</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Sep 2024-present</span>
+						<h2>Business Development Intern</h2>
+						<span class="position">Gen Z Solutions Private Limited</span>
+						<p class="mt-4">gen Z Solutions is a leading Indian IT company specializing in the field of Software Testing, Digital and Data and new age technologies.
+							<ul>
+								<li>•Identify potential clients through email outreach, phone calls, and social media platforms.</li>
+								<li>Generated 15% growth in client acquisition by identifying and pursuing new business opportunities.</li>
+								<li>Handle bids and client acquisition on freelancing platforms like Upwork and Fiver, and analyse market trends and leverage sales tools to drive informed business decisions, thereby increase proposal success rate by 20%.
+									</li>
+								
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"> June 2024- July 2024</span>
+						<h2>Research Intern</h2>
+						<span class="position">IIT Patna</span>
+						<p class="mt-4">IIT Patna is is ranked 33rd in the NIRF and is a premier institution known for its strong emphasis on innovation, research, and quality education. The university boasts a dynamic research culture, with state-of-the-art labs and facilities that encourage cutting-edge research across various disciplines.
+							<ul>
+								<li>As a Research Intern in the Department of CSE at IIT Patna under Dr. Arijit Roy, I focused on simulating UAV-as-a-Service
+									platforms using Python and conducted comprehensive literature reviews on UAV and IoT technologies.</li>
+									<li>I improved my
+										technical writing skills and collaborated with peers on research progress and problem-solving. Key skills include simulations,
+										literature review, technical writing, experimental design, and data analysis.</li>
+								
+							</ul>
+						</p>
+					</div>
+					
+
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"> June 2024- July 2024</span>
+						<h2>Campus Ambassodor Intern</h2>
+						<span class="position">Eximius, IIM Bangalore</span>
+						<p class="mt-4">Eximius, IIM Bangalores's Entrepreneurship and Innovation summit, is one of the most celebrated festivals hosted in the Indian B-school community. The spirit of entrepreneurship is celebrated in the two-day summit at Indian Institute of Management, Bangalore.
+							<ul>
+								<li>Promoted Eximius’s through social media, emails, etc.  </li>
+									
+									<LI>Built a 50+ community of student entrepreneurs & startup enthusiasts.</LI>
+									
+									<li>Conducted various events like speaker talks, workshops and case competitions, to spread awareness.</LI>
+							</ul>
+						</p>
+					</div>
+					
+
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"> May 2024 - July 2024</span>
+						<h2>Research Intern</h2>
+						<span class="position">IIIT Kottayam</span>
+						<p class="mt-4">IIIT Kottayam imparts top-notch technological education at the undergraduate, post graduate and doctoral levels and currently occupies the leading position as a highly sought-after destination for students inclined to indulge in the intricacies of Computer Science and allied fields.
+							<ul>
+								<li>Worked as a summer intern in the area of "Cyber Security" 
+									Supervisor- Prof. Dr. Amit Kumar Roy</li>
+									
+									<LI>Key learnings:</LI><ul>
+									Gained a comprehensive understanding of Cyber security principles and practices.</ul>
+								<ul>Gained hands-on experience with network simulation and troubleshooting using Cisco Packet Tracer.</ul>
+								<ul>Learned to use Nmap for network discovery and security auditing.</ul>
+									
+									<li>Skills:
+								<ul>Strong understanding of Cyber security concepts, including firewalls, intrusion detection/prevention systems (IDS/IPS), and VPNs.</ul>
+							<ul>Gained experience in vulnerability assessments and implementing security measures.</ul>
+						<ul>Proficiency in using Cisco Packet Tracer, Nmap</ul></LI>
+							</ul>
+						</p>
+					</div>
+					
+
+				</div>
+				
+	
+		
+	
+				
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"> Jan 2024- Feb 2024</span>
+						<h2>Data Analyst Intern</h2>
+						<span class="position"> Unified Mentor Private Limited</span>
+						<p class="mt-4">Established in 2022, Unified Mentor is a shining example of how lofty goals and real accomplishments can be reconciled. Unified Mentor has assumed the role of a transformational catalyst by concentrating on web development, data science, and digital marketing and encouraging growth, innovation, and excellence.
+							<ul>
+								
+
+
+										<li>I defined the values and data properties for the project.</li>
+										<li>I build and maintain databases and data systems.</li>
+										<li>I gathered information from relevant sources and translate it to interested parties, such as owners, stakeholders, and customers.</li>
+										<li>I enriched and update the current reporting system.</li>
+										<li>I established appropriate strategies and procedures to ensure positive outcomes.</li>
+										<li>I developed data mapping techniques for complex business queries.</li>
+										<li>I analyzed customer behavior for recent updates and trends.</li>
+								
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date"> March 2023 - May 2023</span>
+					<h2>Full-Stack Web development Intern</h2>
+					<span class="position">Solar Secure Solutions</span>
+					<p class="mt-4">Solar Secure solutions is an MSME(Govt. of India) organization working on various environmental issues such as solar energy services, water conservation, renewable energy projects, and eco-tourism Camps. 
+						<ul>
+							<li>Contributed to 6 minor projects and built a fully functional restaurant website with PayPal Payment gateway facility as
+								a major project.
+								</li>
+								<li>Skills: Full-Stack Development, Teamwork</li>
+							
+						</ul>
+					</p>
+				</div>
+
+	
+
+			</div>
+		</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021-2025</span>
+    					<h2>Bachelor of Technology</h2>
+    					<span class="position">Harcourt Butler Technical University</span>
+    					<p class="mt-4">CGPA:8.37</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2019-2020</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">Woodbine Gardenia School</span>
+    					<p class="mt-4">Percentage: 94%</p>
+    				</div>
+				</div>
+    		</div>
+            <div class="row">
+				<h1 class="big-4">Certifications</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			
+				<div class="row">
+					<div class="col-md-4">
+						<div class="resume-wrap ftco-animate">
+							<p class="date">Nov 25, 2024</p>
+							<h3 class="heading"><a href="https://drive.google.com/file/d/1JKL7-ccG_kbo_Bw5k1qLdjCqfkZVtBYd/view?usp=drive_link"> Principles of Management</a></h3>
+							<span class="position">Johns Hopkins University</span>
+						
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="resume-wrap ftco-animate">
+							<p class="date">Feb 2, 2024</p>
+							<h3 class="heading"><a href="https://drive.google.com/file/d/1eMDyoqkskBZzmaFQsMqfzRvYdrRZ-8Lf/view?pli=1"> Introduction to Data Science in Python</a></h3>
+							<span class="position">University of Michigan</span>
+						
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="resume-wrap ftco-animate">
+							<p class="date">Jan 17, 2024</p>
+							<h3 class="heading"><a href="https://drive.google.com/file/d/1l3EXxt8ULNhAWh4n22w1tttMkyy2U2sL/view"> MIS Training - Advance Excel + Macro + Access + SQL</a></h3>
+							<span class="position">Udemy</span>
+						
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="resume-wrap ftco-animate">
+							<p class="date">Sep 2023</p>
+							<h3 class="heading"><a href="https://drive.google.com/file/d/1HAS1ubewDXZ7qp9wGwU6dZSDVXKl6BVx/view"> Data Science for Engineers </a></h3>
+							<span class="position">IIT Madras, NPTEL</span>
+						
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="resume-wrap ftco-animate">
+							<p class="date">Nov 27, 2023</p>
+							<h3 class="heading"><a href="https://drive.google.com/file/d/1me2vfHqJiYq_Rl6XRSvaPYQHEnGizHNj/view">SAP FICO MM Training </a></h3>
+							<span class="position">SIPL</span>
+						
+						</div>
+					</div>
+						<div class="col-md-4">
+							<div class="resume-wrap ftco-animate">
+								<p class="date">Sep 9, 2023</p>
+								<h3 class="heading"><a href="https://drive.google.com/file/d/1me2vfHqJiYq_Rl6XRSvaPYQHEnGizHNj/view">Microsoft Power BI Desktop for Business </a></h3>
+								<span class="position"> Udemy</span>
+							
+							</div>
+						</div>
+							<div class="col-md-4">
+								<div class="resume-wrap ftco-animate">
+									<p class="date">May 21, 2022</p>
+									<h3 class="heading"><a href="https://drive.google.com/file/d/1me2vfHqJiYq_Rl6XRSvaPYQHEnGizHNj/view">Data Analytics for Beginners </a></h3>
+									<span class="position">Google</span>
+								
+								</div>
+						</div>
+						<div class="col-md-4">
+						<div class="resume-wrap ftco-animate">
+							<p class="date">Aug 2023</p>
+							<h3 class="heading"><a href="https://drive.google.com/file/d/1Dyrg20CBRvsSP0E3NllDq5ptkLlfoFim/view?usp=drive_link"> Data Analytics Bootcamp </a></h3>
+							<span class="position">Alex Freberg</span>
+						
+						</div>
+					</div><div class="col-md-4">
+						<div class="resume-wrap ftco-animate">
+							<p class="date">Feb 2, 2024</p>
+							<h3 class="heading"><a href="https://drive.google.com/file/d/1eMDyoqkskBZzmaFQsMqfzRvYdrRZ-8Lf/view?pli=1"> Introduction to Data Science in Python</a></h3>
+							<span class="position">University of Michigan</span>
+						
+						</div>
+					</div>
+	
+					
+				</div>
+
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1akao0CvkFJziRgshhQJcUeUBHZSnoKvr/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/harshitah2s4/Optimization-and-Cost-Analysis-for-UAV-Based-Sensor-Networks-in-Smart-Farming" class="block-20 zoom-effect" style="background-image: url('images/farming.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+		
+				  <h3 class="heading"><a href="https://github.com/harshitah2s4/Optimization-and-Cost-Analysis-for-UAV-Based-Sensor-Networks-in-Smart-Farming"> Optimization and Cost Analysis for UAV Based Sensor Networks in Smart Farming </a></h3>
+				  <p>This project aims to analyze and optimize the operational costs and efficiency of Unmanned Aerial Vehicles (UAVs) equipped with sensors for smart farming applications. The study involves evaluating various cost components associated with UAV operations.Finally our approach is compared with two other approaches, hence proving our model is the most optimal one.</p>
+				</div>
+			  </div>
+			</div>
+		
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/harshitah2s4/Netflix-Data-Analysis-Project" class="block-20 zoom-effect" style="background-image: url('images/netflix.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/harshitah2s4/Netflix-Data-Analysis-Project"> Netflix Data Analysis Project</a></h3>
+                <p>In this project, I conducted Exploratory Data Analysis (EDA) on a dataset containing information about Netflix shows.
+					My EDA provided valuable insights into the characteristics and trends of Netflix shows, which can inform decision-making
+					processes and further analyses.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/harshitah2s4/Neural-Network-based-Breast-Cancer-Classification-Model" class="block-20 zoom-effect" style="background-image: url('images/images.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/harshitah2s4/Neural-Network-based-Breast-Cancer-Classification-Model"> Neural Network based Breast Cancer Classification Model</a></h3>
+                <p>Build a Neural Network based Breast Cancer Classification Model This is a predictive system which classifies the tumor
+					as benign or malignant An accuracy score of 95.6 percent was achieved on test data</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/harshitah2s4/Data-Analysis-Project-on-Hotel-Reservation-Cancellations" class="block-20 zoom-effect" style="background-image: url('images/hotel.webp');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+				<h3 class="heading"><a href="https://github.com/harshitah2s4/Data-Analysis-Project-on-Hotel-Reservation-Cancellations">  Data Analysis Project on Hotel Reservation Cancellations</a></h3>
+                <p> This Projects tackles the business problem of lowering cancellation rates of Hotels to increase their efficiency and boost
+					their revenue . Each variable of the problem is explored in detail and findings are presented through precise visualizations
+					. A detailed report gives various insights of the Project . At last suggestions have been provided to combat the business
+					problem.
+					</p>
+              </div>
+            </div>
+          </div>
+        
+	<br>
+		
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/harshitah2s4/Machine-Learning-Project-for-Diabetes-Prediction" class="block-20 zoom-effect" style="background-image: url('images/diabetes.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/harshitah2s4/Machine-Learning-Project-for-Diabetes-Prediction"> Machine Learning Model for Diabetes Prediction</a></h3>
+				  <p>Build a system that can predict whether a person has diabetes or not with the help of Machine Learning. This project is
+					done in Python. In this project I have used Support Vector Machine model for the prediction.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/harshitah2s4/Pizza-Sales-Analysis-Project" class="block-20 zoom-effect" style="background-image: url('images/food-delivery.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/harshitah2s4/Pizza-Sales-Analysis-Project"> Pizza Sales Data Analysis Project </a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 
+	  </div>
+	
+</div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="23">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="47">0</strong>
+                <span>The Book Banter Club Community</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Volunteering Experience</span>
+              </div>
+            </div>
+          </div>
+		
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/harshitah2s4" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Kanpur, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 6392717469</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">harshitah2s4@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1akao0CvkFJziRgshhQJcUeUBHZSnoKvr/view?usp=sharing">Link</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://vjriw52r.forms.app/reach-out-harshita-srivastava" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/harshita-srivastava-11b8b5234/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://x.com/harshitah2s4"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/harshita.srivastava.94064"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/harshitah2s4/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+   
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
